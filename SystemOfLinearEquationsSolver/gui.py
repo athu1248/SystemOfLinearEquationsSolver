@@ -1,23 +1,5 @@
 from tkinter import Entry, Tk, Label, Scale, Frame, ttk, TOP, X, BOTH, Grid, Button,N,S,W,E, IntVar
 from matrices import matrix
-"""
-def refreshTable(noOfVar):
-    noOfVar=int(noOfVar)
-    list1 = []
-    for col in range(0,noOfVar+2):
-        list1.append(col+1)
-    table1.config(columns = tuple(list1))
-    for col in range(1,noOfVar+3): # 1 + last value
-        if (col==1):
-            table1.heading(1, text="Eq No.")
-        elif (col==noOfVar+2):
-            table1.heading(col, text = "C")
-        else:
-            table1.heading(col, text = "x"+str(col-1))
-    for row in range(noOfVar):
-        for column in range(1, noOfVar+2):
-            if (column == 1):
-"""
 
 def refreshTable(noOfVar):
     global numsTotal
@@ -85,14 +67,9 @@ def solve():
     for i in range(int(noVarScale.get())):
         const1 = numsTotal[i+1]["num"+str(i+1)+str(int(noVarScale.get())+1)].get()
         m2.insertRow(const1)
-
-    """
-    print(m1)
-    print(m2)
-    """
+        
     m1 = m1.inverse()
     answer1 = m1 ** m2
-    #print(answer1)
 
     refreshAnswerTable(answer1)
 
@@ -118,12 +95,6 @@ def start():
     global frame2
     frame2 = Frame(window)
     frame2.pack()
-
-    """
-    table1 = ttk.Treeview(frame1, columns = (1,2,3,4), show = "headings")
-
-    table1.pack(fill=X)
-    """
 
     window.mainloop()
 
