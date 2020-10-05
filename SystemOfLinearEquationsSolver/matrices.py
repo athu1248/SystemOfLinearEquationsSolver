@@ -190,11 +190,11 @@ class matrix:
     
     def inverse(self):
         determinant = self.determinant()
-        print("Determinant =",determinant)
+        #print("Determinant =",determinant)
         if determinant == 0:
             return "Inverse does not exist!!"
         adjoint = self.adjoint()
-        print("Adjoint =")
-        print(adjoint)
+        #print("Adjoint =")
+        #print(adjoint)
         inverse = adjoint * frac("1/"+str(determinant))
         return inverse
