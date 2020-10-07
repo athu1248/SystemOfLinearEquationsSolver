@@ -61,16 +61,15 @@ def solve():
             #print(i, j)
             num1 = numsTotal[i+1]["num"+str(i+1)+str(j)].get()
             listOfRowNum.append(num1)
-        m1.insertRow(listOfRowNum) # ERROR! insertRow ising individual numbers, not list
+        m1.insertRow(listOfRowNum)
     
-    m2 = matrix(int(noVarScale.get()), 1) # Matrix of constants
+    m2 = matrix(int(noVarScale.get()), 1)
     for i in range(int(noVarScale.get())):
         const1 = numsTotal[i+1]["num"+str(i+1)+str(int(noVarScale.get())+1)].get()
         m2.insertRow(const1)
 
     m1 = m1.inverse()
     answer1 = m1 ** m2
-    #print(answer1)
 
     refreshAnswerTable(answer1)
 
@@ -99,12 +98,6 @@ def start():
     global frame2
     frame2 = Frame(window)
     frame2.pack()
-
-    """
-    table1 = ttk.Treeview(frame1, columns = (1,2,3,4), show = "headings")
-
-    table1.pack(fill=X)
-    """
 
     window.mainloop()
 
