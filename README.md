@@ -8,7 +8,6 @@ This is a system of linear equations solver which also comes with a GUI. It uses
   1) 3x + 2y + 4z = 16
   2) 1x + 1y + 2z = 17
   3) 2y + 4z = 10
-  
   Add the coefficents in the manner as shown below:
 3. Click Solve! to get the values for x1, x2, x3 (aka x,y,z)
 4. Click Reset to reset the board.
