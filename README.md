@@ -2,7 +2,6 @@
 This is a system of linear equations solver which also comes with a GUI. It uses matrices to solve the equations.
 
 # How to use
-## Entering the linear equations
 1. Set the number of variables using the scrollbar in the top.
 2. Enter the coeffecients (only integers) of the variables in the corresponding columns. For example, if you have 3 equations: 
   1) 3x + 2y + 4z = 16
